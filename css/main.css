@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #101611, #00ff2f);
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scoreboard {
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.65);
+}
+
+canvas {
+    border: 8px solid #00ff11;
+    background-color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    animation: canvasGlow 1s infinite alternate;
+}
+
+@keyframes canvasGlow {
+    from { box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); }
+    to { box-shadow: 0 4px 32px rgba(0, 255, 38, 0.73); }
+}
+
+#gameOver {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.5s;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+}
+
+#gameOver p {
+    margin-bottom: 10px;
+}
+
+#gameOver button {
+    background-color: #ff0000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    animation: buttonGlow 1s infinite alternate;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+}
+
+@keyframes buttonGlow {
+    from { box-shadow: 0 0 15px rgba(255, 75, 75, 0.5); }
+    to { box-shadow: 0 0 25px rgba(255, 75, 75, 1); }
+}
+
+.time-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    border: none;
+}
+
+.time-control button {
+    background-color: #3627bc;
+    border: none;
+    padding: 10px 20px;
+    margin: 14px;
+    font-size: 1em;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    transition: 150ms;
+
+}
+
+.time-control button:hover {
+    background-color: #2b1f8e;
+    box-shadow: 4px 4px 2px 0px rgba(0, 39, 193, 0.5);
+    transform: scale(1.05);
+    transition: 150ms;
+}
+
+.hidden {
+    display: none;
+}

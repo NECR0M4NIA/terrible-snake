@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terrible Snake</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <main>
+        <h1>Terrible Snake</h1>
+        <div class="container">
+            <div class="scoreboard">
+                <p>Score : <span id="score">0</span></p>
+                <p>Meilleur score : <span id="high-score">0</span></p>
+            </div>
+            <canvas id="gameCanvas"></canvas>
+            <div id="gameOver" class="hidden">
+                <p>Vous êtes mort</p>
+                <button onclick="restartGame()">Recommencer</button>
+            </div>
+        </div>
+        <div class="time-control">
+            <button onclick="addTime()">Vitesse +</button>
+            <button onclick="removeTime()">Vitesse -</button>
+        </div>
+        <script src="script.js"></script>
+    </main>
+</body>
+</html>
